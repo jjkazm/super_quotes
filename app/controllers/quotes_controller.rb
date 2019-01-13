@@ -8,7 +8,7 @@ class QuotesController < ApplicationController
   end
 
   def create
-    @quote = Quote.new(qoute_params)
+    @quote = Quote.new(quote_params)
     if @quote.save
       flash[:success] = "Quote has been added"
       redirect_to quotes_path

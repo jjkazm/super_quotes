@@ -1,0 +1,11 @@
+.row
+  .col-sm-8.offset-sm-2.align-middle
+    %h1 Add new quote
+    = simple_form_for @quote, wrapper: :horizontal_form do |f|
+      = f.error_notification
+      = f.input :body
+      = f.input :source
+      .form-group.row.mb-0
+        .col-sm-9.offset-sm-3
+          = f.button :submit, class: "btn-primary"
+          = link_to "Cancel", quotes_path, class: "btn btn-outline-secondary"
