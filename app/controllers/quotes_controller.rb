@@ -14,6 +14,7 @@ class QuotesController < ApplicationController
       redirect_to quotes_path
     else
       render 'new'
+    end
   end
 
   private
