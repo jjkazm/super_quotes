@@ -1,1 +1,15 @@
 = link_to "New Quote", new_quote_path
+- @quotes.each do |quote|
+  .card
+    .card-body
+      %blockquote.blockquote.mb-0
+        %p
+          = quote.body
+        %footer.blockquote-footer
+          Someone famous in
+          %cite
+            = quote.source
+    .card-footer.text-muted
+      = time_ago_in_words(quote.created_at)
+      ||
+      dsad
