@@ -8,6 +8,10 @@ class QuotesController < ApplicationController
     @quote = Quote.new
   end
 
+  def show
+    @quote = Quote.find(params[:id])
+  end
+
   def create
     @quote = Quote.new(quote_params)
     if @quote.save

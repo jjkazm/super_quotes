@@ -1,0 +1,11 @@
+.jumbotron
+  %blockquote.blockquote.mb-0
+    %p
+      = @quote.body
+    %footer.blockquote-footer
+      = @quote.introduction
+    %hr.my-6
+      .text-muted.small
+        created 
+        = time_ago_in_words(@quote.created_at)
+        ago
