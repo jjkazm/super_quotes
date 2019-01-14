@@ -6,9 +6,8 @@
         %p
           = quote.body
         %footer.blockquote-footer
-          Someone famous in
-          %cite
-            = quote.source
+          = quote.introduction
+
     .card-footer.text-muted
       = time_ago_in_words(quote.created_at)
       ||
