@@ -1,0 +1,7 @@
+.card.custom-margin
+  .card-body
+    %h5 Give us your opinion
+    = simple_form_for [@quote, @quote.comments.build] do |f|
+      = f.error_notification
+      = f.input :body, placeholder: "This is good one"
+      = f.button :submit, class: "btn-primary"
