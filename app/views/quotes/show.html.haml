@@ -16,11 +16,12 @@
         %h5 Give us your opinion
         = simple_form_for [@quote, @quote.comments.build] do |f|
           = f.error_notification
-          = f.input :body, label: false
+          = f.input :body
           = f.button :submit, class: "btn-primary"
     .card.custom-margin
       .card-body
         %h5 Comments:
+    = will_paginate @comments, class: "apple_pagination"
     - @comments.each do |comment|
       .card.custom-margin
         .card-body
@@ -31,3 +32,4 @@
           created
           = time_ago_in_words(comment.created_at)
           ago
+    = will_paginate @comments, class: "apple_pagination"

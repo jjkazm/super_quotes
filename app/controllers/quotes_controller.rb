@@ -1,7 +1,7 @@
 class QuotesController < ApplicationController
 
   def index
-    @quotes = Quote.all.order(created_at: :desc)
+    @quotes = Quote.paginate(page: params[:page], per_page: 7).order(created_at: :desc)
   end
 
   def new
@@ -10,7 +10,7 @@ class QuotesController < ApplicationController
 
   def show
     @quote = Quote.find(params[:id])
-    @comments = @quote.comments.all.order(created_at: :desc)
+    @comments = @quote.comments.paginate(page: params[:page], per_page: 7).order(created_at: :desc)
 
   end
 
@@ -20,7 +20,7 @@ class QuotesController < ApplicationController
       flash[:success] = "Quote has been added"
       redirect_to quotes_path
     else
-      render 'new'
+      render 'quotes/new'
     end
   end
 

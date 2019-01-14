@@ -1,3 +1,4 @@
+= will_paginate @quotes, class: "apple_pagination"
 - @quotes.each do |quote|
   .card.custom-margin
     .card-body
@@ -6,9 +7,9 @@
           = quote.body
         %footer.blockquote-footer
           = quote.introduction
-
     .card-footer.text-muted
       created
       = time_ago_in_words(quote.created_at)
       ago ||
       = link_to "#{pluralize(quote.comments.count, "comment")} || Add comment", quote_path(quote)
+= will_paginate @quotes, class: "apple_pagination"

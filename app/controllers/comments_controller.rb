@@ -6,8 +6,7 @@ class CommentsController < ApplicationController
     if @comment.save
       flash[:success] = "Comment has been added"
       redirect_to quote_path(@quote)
-    else
-      redirect_to quote_path(@quote)
+  
     end
   end
 
