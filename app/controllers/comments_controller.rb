@@ -11,14 +11,8 @@ class CommentsController < ApplicationController
     end
   end
 
-  def index
-    @comments = @quote.comments.order(created_at: :desc)
-  end
-
-
-    private
-     def comment_params
-       params.require(:comment).permit(:body)
-     end
-
+  private
+    def comment_params
+      params.require(:comment).permit(:body)
+    end
 end

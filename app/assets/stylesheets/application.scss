@@ -1,14 +1,31 @@
 // Custom bootstrap variables must be set or imported *before* bootstrap.
 @import "bootstrap";
 
+BODY {
+  background: linear-gradient( 90deg,
+      rgba(255, 225, 132, .7) 50%, rgba(255,255,255, 0) 50%),
+    linear-gradient( 90deg,
+      rgba(32, 113, 120, .3) 50%, rgba(255,255,255, 0) 50%),
+    linear-gradient( 90deg,
+      rgba(255, 150, 102, .3) 50%, rgba(255,255,255, 0) 50%),
+    linear-gradient( 90deg,
+      rgba(23, 76, 79, .1) 50%, rgba(255,255,255, 0) 50%);
+  background-size: 7em 7em, 5em 5em, 3em 3em, 1em 1em;
+  background-color: #F5E9BE;
+  padding-top: 65px;
+  }
+
+/* INDEX */
 .custom-margin {
   margin: 10px 0;
 }
 
-BODY {
-  background: radial-gradient(circle at right, rgba(255, 255, 255, 0) 1.2em, #fcf2d7 1.2em, #fcf2d7 1.74em, rgba(255, 255, 255, 0) 1.74em) 0 0, radial-gradient(circle at left, rgba(255, 255, 255, 0) 1.2em, #fcf2d7 1.2em, #fcf2d7 1.74em, rgba(255, 255, 255, 0) 1.74em) 0 3em, radial-gradient(circle at right, rgba(255, 255, 255, 0) 1.2em, #fdc536 1.2em, #fdc536 1.74em, rgba(255, 255, 255, 0) 1.74em) 1.56em 0, radial-gradient(circle at left, rgba(255, 255, 255, 0) 1.2em, #fdc536 1.2em, #fdc536 1.74em, rgba(255, 255, 255, 0) 1.74em) 1.56em 3em, radial-gradient(circle at right, rgba(255, 255, 255, 0) 1.2em, #e65848 1.2em, #e65848 1.74em, rgba(255, 255, 255, 0) 1.74em) 3.12em 0, radial-gradient(circle at left, rgba(255, 255, 255, 0) 1.2em, #e65848 1.2em, #e65848 1.74em, rgba(255, 255, 255, 0) 1.74em) 3.12em 3em, radial-gradient(circle at right, rgba(255, 255, 255, 0) 1.2em, #2ab69d 1.2em, #2ab69d 1.74em, rgba(255, 255, 255, 0) 1.74em) 4.68em 0, radial-gradient(circle at left, rgba(255, 255, 255, 0) 1.2em, #2ab69d 1.2em, #2ab69d 1.74em, rgba(255, 255, 255, 0) 1.74em) 4.68em 3em;
-  background-size: 6em 6em;
-  background-color: #343844;
-  background-repeat: repeat;
-  font: 16px/2 'Trebuchet MS', Verdana, sans-serif;
+.text-muted {
+  a {
+    color: #6c757d
+  }
+}
+/* NEW */
+.distance {
+  margin-top: 15vh;
 }

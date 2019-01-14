@@ -10,13 +10,14 @@
         = time_ago_in_words(@quote.created_at)
         ago
 .row
-  .col-sm-8.offset-sm-2
-
-    %h5 Give us your opinion
-    = simple_form_for [@quote, @quote.comments.build] do |f|
-      = f.error_notification
-      = f.input :body, label: false
-      = f.button :submit, class: "btn-primary"
+  .col-sm-10.offset-sm-1
+    .card
+      .card-body
+        %h5 Give us your opinion
+        = simple_form_for [@quote, @quote.comments.build] do |f|
+          = f.error_notification
+          = f.input :body, label: false
+          = f.button :submit, class: "btn-primary"
 
 
     %h5 Comments

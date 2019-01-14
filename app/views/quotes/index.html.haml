@@ -11,4 +11,4 @@
       created
       = time_ago_in_words(quote.created_at)
       ago ||
-      dsad
+      = link_to "#{pluralize(quote.comments.count, "comment")} || Add comment", class: "text"
