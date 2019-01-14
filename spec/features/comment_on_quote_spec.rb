@@ -1,10 +1,8 @@
 require 'rails_helper'
 
 RSpec.feature "Adding comments" do
-  before do
-    begin
-      @quote = Quote.create(body: "Lorem ipsum", source: "Some book", author: "somebody")
-    end
+  before(:all) do
+      @quote = create(:quote)
   end
 
   scenario "user adds comment" do
