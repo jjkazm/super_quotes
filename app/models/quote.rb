@@ -1,5 +1,5 @@
 class Quote < ApplicationRecord
-
+  has_many :comments
 
   def introduction
     if self.author.empty? && self.source.empty?
