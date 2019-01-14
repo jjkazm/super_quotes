@@ -12,6 +12,9 @@ gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 
+# Use faker for seeding db
+gem 'faker', '~> 1.9', '>= 1.9.1'
+
 # Use haml
 gem "haml"
 gem "haml-rails", "~> 1.0"
