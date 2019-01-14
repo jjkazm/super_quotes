@@ -10,6 +10,8 @@ class QuotesController < ApplicationController
 
   def show
     @quote = Quote.find(params[:id])
+    @comments = @quote.comments.all.order(created_at: :desc)
+
   end
 
   def create

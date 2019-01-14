@@ -6,6 +6,27 @@
       = @quote.introduction
     %hr.my-6
       .text-muted.small
-        created 
+        created
         = time_ago_in_words(@quote.created_at)
         ago
+.row
+  .col-sm-8.offset-sm-2
+
+    %h5 Give us your opinion
+    = simple_form_for [@quote, @quote.comments.build] do |f|
+      = f.error_notification
+      = f.input :body, label: false
+      = f.button :submit, class: "btn-primary"
+
+
+    %h5 Comments
+    - @comments.each do |comment|
+      .card
+        .card-body
+          %blockquote.blockquote.mb-0
+            %p
+              = comment.body
+        .card-footer.text-muted.small
+          created
+          = time_ago_in_words(comment.created_at)
+          ago
