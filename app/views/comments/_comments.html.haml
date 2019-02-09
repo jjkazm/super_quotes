@@ -1,0 +1,12 @@
+= will_paginate @comments, class: "apple_pagination"
+- @comments.each do |comment|
+  .card.custom-margin
+    .card-body
+      %blockquote.blockquote.mb-0
+        %p
+          = comment.body
+    .card-footer.text-muted.small
+      created
+      = time_ago_in_words(comment.created_at)
+      ago
+= will_paginate @comments, class: "apple_pagination"
