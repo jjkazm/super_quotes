@@ -4,8 +4,6 @@ class CommentsController < ApplicationController
     @quote = Quote.find(params[:quote_id])
     @comment = @quote.comments.new(comment_params)
     if @comment.save
-
-
       respond_to do |format|
         format.html do
             flash[:success] = "Comment has been added"

@@ -1,1 +1,2 @@
-$('#all_comments').html("<%=j render @comments %>");
+$('#all_comments').prepend("<%= escape_javascript(render partial: 'comments/comment', locals: {comment: @comment}) %>");
+$("textarea#comment_body").val('')
