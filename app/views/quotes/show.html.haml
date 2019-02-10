@@ -15,5 +15,11 @@
     .card.custom-margin
       .card-body
         %h5 Comments:
-    = render 'comments/comments'
-    
+    = will_paginate @comments, class: "apple_pagination"
+    - if @comments.any?
+      %div#all_comments
+        .comments
+          = render @comments
+    - else
+      %p No comments yet.
+    = will_paginate @comments, class: "apple_pagination"
