@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   resources :quotes, only: [:index, :new, :create, :show] do
     resources :comments, only: [:create]
   end
+  mount ActionCable.server, at: '/cable'
 end

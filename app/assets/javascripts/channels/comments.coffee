@@ -7,4 +7,5 @@ App.comments = App.cable.subscriptions.create "CommentsChannel",
 
   received: (data) ->
     # Called when there's incoming data on the websocket for this channel
-    $('#all_comments').prepend '<p>' + data['comment'] + '</p>'
+    $('#all_comments').prepend '<p>' + data['body'] + '</p>'
+    $("textarea#comment_body").val('')
