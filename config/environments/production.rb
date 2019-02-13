@@ -1,6 +1,12 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
+
+  # Set up for action cable in heroku
+  config.action_cable.url = 'wss://jjkazm-super-quote-action.herokuapp.com/cable'
+  config.action_cable.allowed_request_origins = [
+    'https://jjkazm-super-quote-action.herokuapp.com' ]
+
   # Code is not reloaded between requests.
   config.cache_classes = true
 
